@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Wygeneruj swój plan</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800|Roboto:300,400,500,700,900&amp;subset=latin-ext" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link href="../css/medium-app.css" rel="stylesheet">
+    <script src="../js/add-loading-gif.js"></script>
+    <script src="../js/button-system.js"></script>
+    <script src="../js/colors-hover-focus.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.4.1/jspdf.debug.js" integrity="sha384-THVO/sM0mFD9h7dfSndI6TS0PgAGavwKvB5hAxRRvc0o9cPLohB0wb/PTA7LdUHs" crossorigin="anonymous"></script>
+    <script src="../js/colors-hover-focus.js"></script>
+    <script src="../js/pdf.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="shortcut icon" href="../img/schedule.png">
+
+</head>
+
+<body>
+
+    <div class="wrapper" id="wrapper">
+    
+        <div class="left" id="left">
+
+            <section id="gif-box">
+
+                <div class="gif-box"></div>
+                <p>ładowanie</p>
+
+            </section>
+
+            <div class="left-container">
+
+                <header>
+                    
+                    <h1 id="app-h1">Wypełnij poniższe pola</h1>
+
+                    <div class="break-line" id="break-line"></div>
+                    
+                </header>
+
+                <form action="" method="" autocomplete="off">
+                
+                    <div class="inputs-column">
+
+                        <div class="input-box" id="input-box-first">
+
+                            <label for="input-first">Klasa:</label>
+                            <input type="text" id="input-first" placeholder="Podaj klasę">
+
+                        </div>
+
+                        <div class="input-box" id="input-box-second">
+
+                            <label for="input-second">Wychowawca:</label>
+                            <input type="text" id="input-second" placeholder="Podaj imię i nazwisko wychowawcy">
+
+                        </div>
+
+                        <div class="input-box" id="input-box-third">
+
+                            <label for="input-third">Od kiedy obowiązuje:</label>
+                            <input type="text" id="input-third" placeholder="Podaj datę, od której plan obowiązuje">
+
+                        </div>
+
+                        <div class="input-box" id="input-box-fourth">
+
+                            <label for="input-fourth">Rok szkolny:</label>
+                            <input type="text" id="input-fourth" placeholder="Podaj rok szkolny">
+
+                        </div>
+                    
+                    </div>
+
+                    <div class="bg-chooser" id="bg-chooser">
+
+                        <header><h2>Wybierz kolor tła:</h2></header>
+
+                        <div class="scroll-box">
+
+                            <div class="background-box">
+
+                                <div class="color-box color1" id="color1" data-bind="#f0ead6">
+
+                                    <i class="fas fa-check" id="choice-first"></i>
+                                    <div class="color-hover"></div>
+
+                                </div>
+
+                                <div class="color-box color2" id="color2" data-bind="#c7dbf4">
+
+                                    <i class="fas fa-check" id="choice-second"></i>
+                                    <div class="color-hover"></div>
+
+                                </div>
+
+                                <div class="color-box color3" id="color3" data-bind="#e8e3d9">
+
+                                    <i class="fas fa-check" id="choice-third"></i>
+                                    <div class="color-hover"></div>
+
+                                </div>
+
+                                <div class="color-box color4" id="color4" data-bind="#efcdb2">
+
+                                    <i class="fas fa-check" id="choice-fourth"></i>
+                                    <div class="color-hover"></div>
+
+                                </div>
+
+                                <div class="color-box color5" id="color5" data-bind="#a8edea">
+
+                                    <i class="fas fa-check" id="choice-fifth"></i>
+                                    <div class="color-hover"></div>
+
+                                </div>
+
+                                <div class="color-box color6" id="color6" data-bind="#c3ebed">
+
+                                    <i class="fas fa-check" id="choice-sixth"></i>
+                                    <div class="color-hover"></div>
+
+                                </div>
+
+                                <div class="color-box color7" id="color7" data-bind="#bff0d2">
+
+                                    <i class="fas fa-check" id="choice-seventh"></i>
+                                    <div class="color-hover"></div>
+
+                                </div>
+
+                                <div class="color-box color8" id="color8" data-bind="#ffe4e1">
+
+                                    <i class="fas fa-check" id="choice-eighth"></i>
+                                    <div class="color-hover"></div>
+
+                                </div>
+
+                                <div class="color-box color9" id="color9" data-bind="#bfff88">
+
+                                    <i class="fas fa-check" id="choice-nineth"></i>
+                                    <div class="color-hover"></div>
+
+                                </div>
+
+                                <div class="color-box color10" id="color10" data-bind="#ffffff">
+
+                                    <i class="fas fa-check" id="choice-tenth"></i>
+                                    <div class="color-hover"></div>
+
+                                </div>
+
+                                <div class="color-box color11" id="color11" data-bind="#f0f8ff">
+
+                                    <i class="fas fa-check" id="choice-eleventh"></i>
+                                    <div class="color-hover"></div>
+
+                                </div>
+
+                                <div class="color-box color12" id="color12" data-bind="#faebd7">
+
+                                    <i class="fas fa-check" id="choice-twelveth"></i>
+                                    <div class="color-hover"></div>
+
+                                </div>
+
+                                <div class="color-box color13" id="color13" data-bind="#eeeeee">
+
+                                    <i class="fas fa-check" id="choice-thirteenth"></i>
+                                    <div class="color-hover"></div>
+
+                                </div>
+
+                                <div class="color-box color14" id="color14" data-bind="#ffc3a0">
+
+                                    <i class="fas fa-check" id="choice-fourteenth"></i>
+                                    <div class="color-hover"></div>
+
+                                </div>
+
+                                <div class="color-box color15" id="color15" data-bind="#c0d6e4">
+
+                                    <i class="fas fa-check" id="choice-fifteenth"></i>
+                                    <div class="color-hover"></div>
+
+                                </div>
+
+                                <div class="color-box color16" id="color16" data-bind="#f5f5f5">
+
+                                    <i class="fas fa-check" id="choice-sixteenth"></i>
+                                    <div class="color-hover"></div>
+
+                                </div>
+
+                                <div class="color-box color17" id="color17" data-bind="#b4eeb4">
+
+                                    <i class="fas fa-check" id="choice-seventeenth"></i>
+                                    <div class="color-hover"></div>
+
+                                </div>
+
+                                <div class="color-box color18" id="color18" data-bind="#f5f5dc">
+
+                                    <i class="fas fa-check" id="choice-eighteenth"></i>
+                                    <div class="color-hover"></div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="submit">
+
+                        <button type="button" id="btn-app-settings">Zapisz</button>
+
+                    </div>
+                
+                </form>
+
+            </div>
+
+        </div>
+
+        <div class="right" id="right">
+        
+             <div class="schedule-main">
+             
+                <header><h1>Wypełnij plan poniżej</h1></header>
+                
+                <div class="schedule" id="schedule">
+
+                   <header>
+
+                       <section class="class-teacher" id="class-teacher"></section>
+                       <section class="title"><h1>Plan Lekcji</h1></section>
+                       <section class="year" id="year"></section>
+
+                   </header>
+
+                   <section class="options">
+
+                       <section class="hours"><p>godz.</p></section>
+                       <section class="mond"><p>Poniedziałek</p></section>
+                       <section class="tuesd"><p>Wtorek</p></section>
+                       <section class="wed"><p>Środa</p></section>
+                       <section class="thurs"><p>Czwartek</p></section>
+                       <section class="friday"><p>Piątek</p></section>
+
+                   </section>
+
+                   <section class="first-row">
+
+                       <section class="f1"><input type="text" value="1) "></section>
+                       <section class="f2"><input type="text"></section>
+                       <section class="f3"><input type="text"></section>
+                       <section class="f4"><input type="text"></section>
+                       <section class="f5"><input type="text"></section>
+                       <section class="f6"><input type="text"></section>
+
+                   </section>
+
+                   <section class="first-row">
+
+                       <section class="f1"><input type="text" value="2) "></section>
+                       <section class="f2"><input type="text"></section>
+                       <section class="f3"><input type="text"></section>
+                       <section class="f4"><input type="text"></section>
+                       <section class="f5"><input type="text"></section>
+                       <section class="f6"><input type="text"></section>
+
+                   </section>
+
+                   <section class="first-row">
+
+                       <section class="f1"><input type="text" value="3) "></section>
+                       <section class="f2"><input type="text"></section>
+                       <section class="f3"><input type="text"></section>
+                       <section class="f4"><input type="text"></section>
+                       <section class="f5"><input type="text"></section>
+                       <section class="f6"><input type="text"></section>
+
+                   </section>
+
+                   <section class="first-row">
+
+                       <section class="f1"><input type="text" value="4) "></section>
+                       <section class="f2"><input type="text"></section>
+                       <section class="f3"><input type="text"></section>
+                       <section class="f4"><input type="text"></section>
+                       <section class="f5"><input type="text"></section>
+                       <section class="f6"><input type="text"></section>
+
+                   </section>
+
+                   <section class="first-row">
+
+                       <section class="f1"><input type="text" value="5) "></section>
+                       <section class="f2"><input type="text"></section>
+                       <section class="f3"><input type="text"></section>
+                       <section class="f4"><input type="text"></section>
+                       <section class="f5"><input type="text"></section>
+                       <section class="f6"><input type="text"></section>
+
+                   </section>
+
+                   <section class="first-row">
+
+                       <section class="f1"><input type="text" value="6) "></section>
+                       <section class="f2"><input type="text"></section>
+                       <section class="f3"><input type="text"></section>
+                       <section class="f4"><input type="text"></section>
+                       <section class="f5"><input type="text"></section>
+                       <section class="f6"><input type="text"></section>
+
+                   </section>
+
+                   <section class="first-row">
+
+                       <section class="f1"><input type="text" value="7) "></section>
+                       <section class="f2"><input type="text"></section>
+                       <section class="f3"><input type="text"></section>
+                       <section class="f4"><input type="text"></section>
+                       <section class="f5"><input type="text"></section>
+                       <section class="f6"><input type="text"></section>
+
+                   </section>
+
+                   <section class="first-row">
+
+                       <section class="f1"><input type="text" value="8) "></section>
+                       <section class="f2"><input type="text"></section>
+                       <section class="f3"><input type="text"></section>
+                       <section class="f4"><input type="text"></section>
+                       <section class="f5"><input type="text"></section>
+                       <section class="f6"><input type="text"></section>
+
+                   </section>
+
+                </div>
+
+                <div class="submit">
+
+                    <button type="button" class="btn-back" id="btn-back">Wstecz</button>
+                    <button type="button" class="btn-download-settings" id="btn-download-settings">Drukuj</button>
+                    <div class="clear-fix"></div>
+
+                </div>
+
+             </div>   
+        
+        </div>
+    
+    </div>
+    
+</body>
+
+</html>

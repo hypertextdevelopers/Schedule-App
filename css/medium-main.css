@@ -1,0 +1,139 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    height: 100%;
+}
+
+body{
+    height: 100%;
+    background-color: #ffffff;
+    font-family: "Open Sans", sans-serif;
+}
+
+body > a{
+    text-decoration: none;
+}
+
+body > .wrapper{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body > .wrapper > main{
+    width: 1000px;
+    height: auto;
+    display: flex;
+}
+
+.wrapper > main > .left{
+    width: 40%;
+    height: 400px;
+}
+
+main > .left > figure{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    transform: translateX(-20px);
+    opacity: 0;
+}
+
+.left > figure > img{
+    width: 80%;
+    height: auto;
+}
+
+.wrapper > main > .right{
+    width: 60%;
+    height: 400px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+}
+
+main > .right > h3{
+    font-weight: 600;
+    margin-top: 0px;
+    font-size: 1.2rem;
+    font-family: "Open Sans", sans-serif;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all .5s linear;
+}
+
+main > .right > header{
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    transform: translateY(10px);
+    transition: all .5s linear;
+    opacity: 0;
+    line-height: 60px;
+}
+
+.right > header > h1{
+    font-weight: 300;
+    font-size: 2.5rem;
+    font-family: "Open Sans", sans-serif;
+}
+
+header > h1 > span{
+    font-size: 3rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+header > h1 > .span1{
+    color: #63c863;
+}
+
+header > h1 > .span2{
+    color: #474545;
+}
+
+.right > a{
+    text-decoration: none;
+}
+
+.right > a > button[type="button"]{
+    width: 170px;
+    height: 50px;
+    background-color: #63c863;
+    outline: 0;
+    border: 0;
+    border-radius: 50px;
+    text-align: center;
+    color: #ffffff;
+    font-size: 1.1rem;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color .2s linear, background .2s linear, border .2s linear, transform .5s linear;
+    box-sizing: border-box;
+    border: 2px solid transparent;
+    opacity: 0;
+    transform: translateX(430px);
+}
+
+a > button[type="button"] > .arrow-right{
+    font-size: 1.5rem;
+    margin-left: 15px;
+}
+
+.right > a > button[type="button"]:hover{
+    cursor: pointer;
+    border: 2px solid #63c863;
+    background-color: #ffffff;
+    color: #63c863;
+}
